@@ -1,20 +1,26 @@
 {
   "name": "azle-api-rest-ckbtc",
+  "version": "0.2.0",
   "private": true,
+  "license": "MIT",
+  "author": "Adrián Darío Hidalgo Flores",
   "workspaces": [
     "backend/*",
     "frontend/*"
   ],
   "keywords": [
-    "rest api",
     "azle",
+    "bitcoin",
+    "ckbtc",
+    "dapps",
     "express",
     "icp",
     "internet computer",
     "rest",
-    "typescript",
-    "bitcoin",
-    "ckbtc"
+    "rest api",
+    "sqlite",
+    "typeorm",
+    "typescript"
   ],
   "scripts": {
     "postinstall": "npm run btc:install",
@@ -32,8 +38,8 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "prettier": "^3.1.1",
-    "turbo": "^1.11.2",
-    "typescript": "^5.2.2"
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.3",
+    "typescript": "^5.4.5"
   }
 }

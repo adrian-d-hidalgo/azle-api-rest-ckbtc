@@ -1,5 +1,14 @@
 # Azle REST API with ckBTC Integration
 
+This boilerplate is designed to easily build ExpressJS applications usin ckBTC (a Bitcoin pair) on ICP.
+
+## Features
+
+- Build REST API on chain
+- Work with SQL databases
+- Persist database on chain
+- Make ckBTC transactions
+
 ## Run Locally
 
 Clone the project

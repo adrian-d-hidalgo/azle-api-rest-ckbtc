@@ -13,3 +13,7 @@ node_modules
 
 # turbo
 .turbo
+
+# VSC
+.vscode/*
+!.vscode/settings.json
