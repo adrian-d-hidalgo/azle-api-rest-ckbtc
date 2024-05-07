@@ -1,8 +1,25 @@
 {
   "name": "azle-api-rest-ckbtc",
+  "private": true,
+  "workspaces": [
+    "backend/*",
+    "frontend/*"
+  ],
+  "keywords": [
+    "rest api",
+    "azle",
+    "express",
+    "icp",
+    "internet computer",
+    "rest",
+    "typescript",
+    "bitcoin",
+    "ckbtc"
+  ],
   "scripts": {
     "postinstall": "npm run btc:install",
     "btc:install": "sh ./scripts/bitcoin/install.sh",
+    "preclean": "turbo run clean",
     "clean": "rm -rf .bitcoin && rm -rf .dfx && rm -rf .azle && rm -rf node_modules",
     "btc:start": ".bitcoin/bin/bitcoind -conf=$(pwd)/bitcoin.conf -datadir=$(pwd)/.bitcoin/data --port=18444",
     "btc:mint": ".bitcoin/bin/bitcoin-cli -conf=$(pwd)/bitcoin.conf generatetoaddress 50 $npm_config_address",
@@ -13,13 +30,10 @@
     "icp:deploy:ckbtc": "sh ./scripts/ckbtc/ckbtc-deploy.sh",
     "icp:deploy:apps": "sh ./scripts/apps/deploy-apps.sh"
   },
-  "dependencies": {
-    "azle": "^0.21.1",
-    "express": "^4.19.2"
-  },
   "devDependencies": {
-    "@types/express": "^4.17.21",
-    "prettier": "^3.2.5",
+    "@trivago/prettier-plugin-sort-imports": "4.3.0",
+    "prettier": "^3.1.1",
+    "turbo": "^1.11.2",
     "typescript": "^5.2.2"
   }
 }

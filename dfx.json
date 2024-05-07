@@ -2,18 +2,18 @@
   "version": 1,
   "dfx": "0.19.0",
   "canisters": {
-    "backend": {
+    "express": {
       "type": "custom",
-      "main": "src/backend/index.ts",
-      "candid": "src/backend/index.did",
+      "main": "backend/express/index.ts",
+      "candid": "backend/express/index.did",
       "candid_gen": "http",
-      "build": "npx azle backend",
-      "wasm": ".azle/backend/backend.wasm",
+      "build": "npx azle express",
+      "wasm": ".azle/express/express.wasm",
       "gzip": true,
       "metadata": [
         {
           "name": "candid:service",
-          "path": "src/backend/index.did"
+          "path": "backend/express/index.did"
         },
         {
           "name": "cdk:name",
