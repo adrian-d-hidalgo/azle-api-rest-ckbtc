@@ -55,8 +55,6 @@ codesign -s - .bitcoin/bin/bitcoin-cli
 npm run btc:mint --address=$ADDRESS
 ```
 
-Wait for 5 around seconds and make a request to `POST /users/:userId/balance`
+Wait for 5 around seconds and make a request to `PUT /users/:userId/balance`
 
-Then, you can verify the user balance in this endpoint:
-
-`GET /users/:userId/balance`
+Then, you can verify the user balance in this endpoint: `GET /users/:userId/balance`
