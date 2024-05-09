@@ -1,20 +1,25 @@
 {
   "name": "azle-api-rest-ckbtc",
+  "version": "0.2.0",
   "private": true,
+  "license": "MIT",
+  "author": "Adrián Darío Hidalgo Flores",
   "workspaces": [
-    "backend/*",
-    "frontend/*"
+    "backend/*"
   ],
   "keywords": [
-    "rest api",
     "azle",
-    "express",
+    "bitcoin",
+    "ckbtc",
+    "dapps",
+    "expressjs",
     "icp",
     "internet computer",
     "rest",
-    "typescript",
-    "bitcoin",
-    "ckbtc"
+    "rest api",
+    "sqlite",
+    "typeorm",
+    "typescript"
   ],
   "scripts": {
     "postinstall": "npm run btc:install",
@@ -22,7 +27,7 @@
     "preclean": "turbo run clean",
     "clean": "rm -rf .bitcoin && rm -rf .dfx && rm -rf .azle && rm -rf node_modules",
     "btc:start": ".bitcoin/bin/bitcoind -conf=$(pwd)/bitcoin.conf -datadir=$(pwd)/.bitcoin/data --port=18444",
-    "btc:mint": ".bitcoin/bin/bitcoin-cli -conf=$(pwd)/bitcoin.conf generatetoaddress 50 $npm_config_address",
+    "btc:mint": "sh scripts/bitcoin/mint.sh $npm_config_address",
     "icp:start": "dfx start --clean --enable-bitcoin",
     "icp:canister:create": "dfx canister create --all",
     "preicp:deploy:local": "npm run icp:canister:create",
@@ -32,8 +37,7 @@
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
-    "prettier": "^3.1.1",
-    "turbo": "^1.11.2",
-    "typescript": "^5.2.2"
+    "prettier": "^3.2.5",
+    "turbo": "^1.13.3"
   }
 }

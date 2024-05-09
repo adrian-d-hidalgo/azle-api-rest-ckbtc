@@ -1,5 +1,14 @@
 # Azle REST API with ckBTC Integration
 
+This boilerplate is designed to easily build ExpressJS applications usin ckBTC (a Bitcoin pair) on ICP.
+
+## Features
+
+- Build REST API on chain
+- Work with SQL databases
+- Persist database on chain
+- Make ckBTC transactions
+
 ## Run Locally
 
 Clone the project
@@ -51,10 +60,9 @@ codesign -s - .bitcoin/bin/bitcoin-cli
 ```
 
 ```bash
-# Run three times this command, but wait 1 second between each exacution
 npm run btc:mint --address=$ADDRESS
 ```
 
-Wait for 5 around seconds and make a request to `PUT /users/:userId/balance`
+After minting, call the endpoint `PUT /users/:userId/balance` to update the account balance.
 
-Then, you can verify the user balance in this endpoint: `GET /users/:userId/balance`
+Then, you can verify the account balance in this endpoint: `GET /users/:userId/balance`
