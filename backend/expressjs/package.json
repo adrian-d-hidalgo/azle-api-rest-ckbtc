@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "expressjs",
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
-    "@types/node": "^20.12.10",
+    "@types/node": "^20.12.11",
     "typescript": "^5.4.5"
   }
 }
