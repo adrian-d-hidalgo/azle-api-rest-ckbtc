@@ -30,6 +30,10 @@ const ckbtcMinter = new CkbtcMinter(
   Principal.fromText(process.env.CKBTC_MINTER_CANISTER_ID!)
 );
 
+app.get("/health", (_, res) => {
+  res.send("OK");
+});
+
 app.get("/users", (req, res) => {
   res.json(users);
 });
