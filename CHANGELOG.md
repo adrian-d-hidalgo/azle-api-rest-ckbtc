@@ -6,6 +6,7 @@
 - Turbo added
 - Documentation improved
 - Issues template added
+- Dependencies updated
 
 ### Modified
 
