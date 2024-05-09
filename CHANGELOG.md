@@ -1,4 +1,4 @@
-## [0.2.0] - 2024-05-08
+## [0.2.0] - 2024-05-09
 
 ### Added
 
@@ -7,6 +7,7 @@
 - Documentation improved
 - Issues template added
 - Dependencies updated
+- Mint script improved
 
 ### Modified
 
